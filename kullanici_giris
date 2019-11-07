@@ -1,0 +1,14 @@
+system_kullanici_adi = 'alimuraat'
+system_kullanici_parola = 'almuta'
+
+kullanici_adi = input('Kullanici adi giriniz')
+parola = input('Parola girini')
+
+if system_kullanici_adi == kullanici_adi and system_kullanici_parola != parola:
+    print('Parola hatali...')
+elif system_kullanici_adi != kullanici_adi and system_kullanici_parola == parola:
+    print('Yanlis Kullanici adi')
+elif system_kullanici_adi != kullanici_adi and system_kullanici_parola != parola:
+    print('Hatali giris')
+else:
+    print('Giris Basarili !!')
