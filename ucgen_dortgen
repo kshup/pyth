@@ -5,6 +5,14 @@ CREATED BY ALIMURAT
 '''
 
 
+'''
+
+
+
+
+'''
+import math
+
 istenilen_sekil = input('ucgen? dortgen?')
 if istenilen_sekil== 'ucgen' or istenilen_sekil == 'dortgen':
 
@@ -13,7 +21,7 @@ if istenilen_sekil== 'ucgen' or istenilen_sekil == 'dortgen':
         kenar2 = float(input('2. Kenari Giriniz'))
         kenar3 = float(input('3. Kenari Giriniz'))
         print("Cevresi={}".format(kenar1+kenar2+kenar3))
-        if kenar1+kenar2>=kenar3 and kenar2+kenar3>=kenar1 and kenar3+kenar2>=kenar2:
+        if kenar1+kenar2>kenar3 and kenar2+kenar3>kenar1 and kenar3+kenar1>kenar2:
 
             if kenar1 == kenar2 and kenar3 != kenar2 or kenar1 == kenar3 and kenar2 != kenar1 or kenar2 == kenar3 and kenar1 != kenar2:
                 print('ikiz kenar ucgen')
@@ -38,7 +46,7 @@ if istenilen_sekil== 'ucgen' or istenilen_sekil == 'dortgen':
         print("Cevresi={}".format(kose1 + kose2 + kose3+kose4))
         if kose1 == kose3 and kose3 != kose2 or kose2 == kose4 != kose2:
             print('Dikdortgen')
-        elif kose1==kose2 and kose4== kose3:
+        elif kose1==kose2 and kose4 == kose3 or kose2 == kose4 and kose3 == kose1 :
             print('Kare')
         else:
             print('Normal Dortgen')
