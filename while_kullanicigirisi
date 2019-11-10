@@ -1,0 +1,34 @@
+'''
+KULLANICI GIRISI WHILE DONGULU
+'''
+
+sys_kullanici_adi = 'murat'
+sys_parola = '12345'
+giris_hakki= 3
+
+while True:
+    kullaniciadi = input('Kullanici adi giriniz:')
+    parola = input('parola giriniz')
+    if sys_kullanici_adi == kullaniciadi and sys_parola != parola:
+        print('yanlis parola')
+        giris_hakki -=1
+        print('Kalan giris hakkiniz: ',giris_hakki)
+    elif sys_kullanici_adi != kullaniciadi and sys_parola == parola:
+        print('kullanici adi hatali')
+        giris_hakki -= 1
+        print('Kalan giris hakkiniz: ', giris_hakki)
+    elif sys_kullanici_adi != kullaniciadi and sys_parola != parola:
+        print('kullanici adi ve parola hatali')
+        giris_hakki -= 1
+        print('Kalan giris hakkiniz: ', giris_hakki)
+    else:
+        print('Giris basarili')
+        break
+
+
+
+    if giris_hakki == 0 :
+        print('Giris Hakkini kalmadi')
+        break
+
+
