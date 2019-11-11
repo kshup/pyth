@@ -88,11 +88,11 @@ while True:
                     print('Bakiyeniz', Bakiye)
 
                 elif secim_menusu == '3':
-                    parac = int(input('Cekmek istediginiz parayi giriniz'))
-                    if parac > Bakiye:
+                    paray = int(input('Cekmek istediginiz parayi giriniz'))
+                    if paray > Bakiye:
                         print('Yetersiz bakiye')
                         continue
-                    Bakiye = Bakiye - parac
+                    Bakiye = Bakiye - paray
                     print(Bakiye)
                 elif secim_menusu == '4':
                     eldeki_para =   paray - eldeki_para
@@ -104,6 +104,5 @@ while True:
     if kalan_hak == 0:
         print('Giris Hakkiniz kalmadi, lutfen daha sonra tekrar deneyiniz...')
         break
-
 
 
