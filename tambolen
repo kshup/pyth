@@ -1,0 +1,23 @@
+print('''
+Tam Boleneri bulma programi 
+
+Cikmak icin q ya basiniz
+''')
+
+
+def tambolen(sayi):
+    tambolenler= []
+    for i in range(1,sayi+1):
+        if (sayi % i == 0):
+            tambolenler.append(i)
+    return tambolenler
+
+while True:
+    sayi = input('Sayi')
+    if sayi == 'q':
+        print('Programdan cikiliyor..')
+
+    else:
+        sayi = int(sayi)
+        print(tambolen(sayi))
+
