@@ -12,7 +12,7 @@ Islemler:toplama , cikarma , carpma , bolme
 def cikarma(say1,say2):
     return say1 - say2
 def toplama(say1,say2):
-    return sayi1+sayi2
+    return say1+say2
 def bolme(say1,say2):
     return say1 / say2
 def carpma(say1,say2):
