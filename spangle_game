@@ -10,8 +10,8 @@ def pul_kaldirma_oyna(toplam_pul_adedi, max_pul):
             if toplam_pul_adedi < oyuncu1:
                 print("Bu kadar pul yok!")
                 continue
-            if oyuncu1 < 0:
-                print("Hatalı islem")
+            if oyuncu1 <= 0:
+                print("1 ile",max_pul," arası sayı giriniz")
                 continue
 
             if oyuncu1 > max_pul:
@@ -25,7 +25,7 @@ def pul_kaldirma_oyna(toplam_pul_adedi, max_pul):
                 print("Kazandınız! Oyuncu1")
                 break
         else:
-            print("Hatalı islem girdiniz")
+            print("Hatalı ıslem 1 ile", max_pul, "arası bir sayı giriniz")
             continue
 
         while True:
@@ -36,8 +36,8 @@ def pul_kaldirma_oyna(toplam_pul_adedi, max_pul):
                 if toplam_pul_adedi < oyuncu2:
                     print("Bu kadar pul yok!")
                     continue
-                if oyuncu2 < 0:
-                    print("Hatalı islem")
+                if oyuncu2 <= 0:
+                    print("Hatalı ıslem 1 ile", max_pul, "arası tam sayı giriniz")
                     continue
 
                 if oyuncu2 > max_pul:
@@ -54,21 +54,10 @@ def pul_kaldirma_oyna(toplam_pul_adedi, max_pul):
 
 
             else:
-                print("Hatalı islem girdiniz")
+                print("Hatalı ıslem 1 ile", max_pul, "arası tam sayı giriniz")
                 continue
 
-while True:
-    x = input("Toplam Pulu Giriniz")
-    if x.isdigit():
-        x = int(x)
-    y = input("max alınabilecek pulu giriniz")
-            elif y.isdigit():
-                y = int(y)
-                break
-            else:print("hatalı")
 
-
-    else:
-        print("hatalı ıslem")
-
+x = int(input("Toplam Pulu Giriniz"))
+y = int(input("max alınabilecek pulu giriniz"))
 pul_kaldirma_oyna(x, y)
