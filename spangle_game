@@ -1,0 +1,74 @@
+def pul_kaldirma_oyna(toplam_pul_adedi, max_pul):
+    while True:
+
+        if toplam_pul_adedi == 0:
+            break
+        oyuncu1 = input("1. Oyuncu Çekmek istediğiniz sayıyı giriniz")
+        if oyuncu1.isdigit():
+            oyuncu1 = int(oyuncu1)
+
+            if toplam_pul_adedi < oyuncu1:
+                print("Bu kadar pul yok!")
+                continue
+            if oyuncu1 < 0:
+                print("Hatalı islem")
+                continue
+
+            if oyuncu1 > max_pul:
+                print("Hatalı ıslem 1 ile", max_pul, "arası bir sayı giriniz")
+                continue
+
+            toplam_pul_adedi = toplam_pul_adedi - oyuncu1
+            print("Kalan:", toplam_pul_adedi)
+
+            if toplam_pul_adedi == 0:
+                print("Kazandınız! Oyuncu1")
+                break
+        else:
+            print("Hatalı islem girdiniz")
+            continue
+
+        while True:
+            oyuncu2 = input("2.Çekmek istediğiniz sayıyı giriniz")
+            if oyuncu2.isdigit():
+                oyuncu2 = int(oyuncu2)
+
+                if toplam_pul_adedi < oyuncu2:
+                    print("Bu kadar pul yok!")
+                    continue
+                if oyuncu2 < 0:
+                    print("Hatalı islem")
+                    continue
+
+                if oyuncu2 > max_pul:
+                    print("Hatalı ıslem 1 ile", max_pul, "arası bir sayı giriniz")
+                    continue
+                if oyuncu2:
+                    toplam_pul_adedi = toplam_pul_adedi - oyuncu2
+                    print("Kalan:", toplam_pul_adedi)
+                    if toplam_pul_adedi == 0:
+                        print("Kazandınız! Oyuncu2")
+                        break
+                    break
+
+
+
+            else:
+                print("Hatalı islem girdiniz")
+                continue
+
+while True:
+    x = input("Toplam Pulu Giriniz")
+    if x.isdigit():
+        x = int(x)
+    y = input("max alınabilecek pulu giriniz")
+            elif y.isdigit():
+                y = int(y)
+                break
+            else:print("hatalı")
+
+
+    else:
+        print("hatalı ıslem")
+
+pul_kaldirma_oyna(x, y)
